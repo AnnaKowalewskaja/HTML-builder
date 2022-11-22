@@ -13,13 +13,6 @@ fs.mkdir(finishFolder, {
     }
 });
 
-// fs.readdir(path.join(__dirname, 'files'), (err, files) => {
-//     files.forEach(file => {
-//         copyFile(path.join(__dirname, 'files', file), path.join(__dirname, 'files-copy', file),constants.COPYFILE_EXCL);
-//         console.log('Complete!');
-
-//     });
-// });
 
 fs.readdir(startFolder,
     (err, files) => {
@@ -38,20 +31,3 @@ fs.readdir(startFolder,
     });
 
 
-// fs.readdir(startFolder,
-//     (err, files) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             files.forEach(file => {
-//                 fs.stat(startFolder, function (err, stats) {
-//                     let fileName = file;
-//                     fs.copyFile(path.join(startFolder, file), path.join(finishFolder, fileName), (err) => {
-//                         if (err) {
-//                             console.log("Error Found:", err);
-//                         }
-//                     });
-//                 });
-//             });
-//         }
-//     });
